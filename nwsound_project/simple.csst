@@ -1,0 +1,1749 @@
+<?xml version="1.0"?>
+<SoundSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.2.0.0" Platform="Ctr" xmlns="NintendoWare.SoundFoundation.FileFormats.NintendoWare">
+  <Head>
+    <Title>TestSoundSet</Title>
+  </Head>
+  <Body>
+    <SoundSet>
+      <Items>
+        <SoundSetItemFolder Name="@StreamSounds">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <StreamSound Name="STRM_STARCHART">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <Volume>96</Volume>
+                <PlayerPriority>64</PlayerPriority>
+                <PlayerReference Target="DEFAULT_PLAYER" />
+                <ActorPlayer>0</ActorPlayer>
+                <UserParameter>0</UserParameter>
+                <UserParameter1>0</UserParameter1>
+                <UserParameter2>0</UserParameter2>
+                <UserParameter3>0</UserParameter3>
+                <Sound3D>
+                  <Parameters>
+                    <DecayCurve3D>Log</DecayCurve3D>
+                    <DecayRatio3D>0.5</DecayRatio3D>
+                    <DopplerFactor3D>0</DopplerFactor3D>
+                    <Enable3DVolume>True</Enable3DVolume>
+                    <Enable3DPan>True</Enable3DPan>
+                    <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                    <Enable3DPriority>True</Enable3DPriority>
+                    <Enable3DFilter>False</Enable3DFilter>
+                  </Parameters>
+                </Sound3D>
+                <WaveEncoding>Adpcm</WaveEncoding>
+                <PanMode>Balance</PanMode>
+                <PanCurve>Sqrt(-3dB)</PanCurve>
+                <Pitch>1</Pitch>
+                <Sends>
+                  <Send Name="MainSend">127</Send>
+                  <Send Name="AuxASend">0</Send>
+                  <Send Name="AuxBSend">0</Send>
+                </Sends>
+              </Parameters>
+              <Items>
+                <StreamSoundTrack>
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>strm/starchart.wav</FilePath>
+                    <Volume>127</Volume>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </StreamSoundTrack>
+              </Items>
+            </StreamSound>
+          </Items>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@WaveSoundSets">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <WaveSoundSet Name="WSDSET_VOICE">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <WaveArchiveReference Target="(AutoShared)" />
+              </Parameters>
+              <Items>
+                <WaveSound Name="SE_YOSHI">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/yoshi.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+                <WaveSound Name="SE_YOSHI_FB">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/yoshi.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>True</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+                <WaveSound Name="SE_WIHAHO">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/wihaho.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+                <WaveSound Name="SE_WIHAHO_AUX">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/wihaho.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">30</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+              </Items>
+            </WaveSoundSet>
+            <WaveSoundSet Name="WSDSET_SE">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <WaveArchiveReference Target="(AutoShared)" />
+              </Parameters>
+              <Items>
+                <WaveSound Name="SE_SQUARE">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/square_long_a4.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+                <WaveSound Name="SE_SIN440">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/sin440.wav</FilePath>
+                    <Volume>127</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+                <WaveSound Name="SE_STEREO">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/yoshiPianoLoop.44.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+                <WaveSound Name="SE_STEREO_FB">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/yoshiPianoLoop.44.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>True</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+                <WaveSound Name="SE_3D_DOPPLER">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/idle.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>100</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>True</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+                <WaveSound Name="SE_3D_NODOPPLER">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>aif/idle.wav</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>False</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>False</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <ChannelPriority>64</ChannelPriority>
+                    <Pan>64</Pan>
+                    <SurroundPan>0</SurroundPan>
+                    <Pitch>1</Pitch>
+                    <EnvelopeRelease>127</EnvelopeRelease>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <PanMode>Dual</PanMode>
+                    <PanCurve>Sqrt(-3dB)</PanCurve>
+                    <FrontBypass>False</FrontBypass>
+                    <LPF>64</LPF>
+                    <BiquadType>None</BiquadType>
+                    <Biquad>0</Biquad>
+                    <Sends>
+                      <Send Name="MainSend">127</Send>
+                      <Send Name="AuxASend">0</Send>
+                      <Send Name="AuxBSend">0</Send>
+                    </Sends>
+                  </Parameters>
+                </WaveSound>
+              </Items>
+            </WaveSoundSet>
+          </Items>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@SequenceSoundSets">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <SequenceSoundSet Name="SEQSET_SE">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+              </Parameters>
+              <Items>
+                <SequenceSound Name="SEQ_COIN">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>coin</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="BANK_SE2" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_JUMP">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>False</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>False</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>jump_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_LOOP">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>loop_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_CALL">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>call_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_CALL_FB">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>call_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>True</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_PORTA">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>porta_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_PORTA_TIME">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>porta_time_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_SWEEP">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>sweep_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_MOD">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>mod_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_TIE">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>tie_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_MOVE_VOLUME">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>move_volume_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_SUPER_MARIO">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>super_mario</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_OPENTRACK">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>opentrack_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_BANK_SELECT">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>bank_select_seq</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="BANK_SE2" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+                <SequenceSound Name="SEQ_FILTER">
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>seq/se.cseq</FilePath>
+                    <Volume>96</Volume>
+                    <PlayerPriority>64</PlayerPriority>
+                    <PlayerReference Target="DEFAULT_PLAYER" />
+                    <ActorPlayer>0</ActorPlayer>
+                    <UserParameter>0</UserParameter>
+                    <UserParameter1>0</UserParameter1>
+                    <UserParameter2>0</UserParameter2>
+                    <UserParameter3>0</UserParameter3>
+                    <Sound3D>
+                      <Parameters>
+                        <DecayCurve3D>Log</DecayCurve3D>
+                        <DecayRatio3D>0.5</DecayRatio3D>
+                        <DopplerFactor3D>0</DopplerFactor3D>
+                        <Enable3DVolume>True</Enable3DVolume>
+                        <Enable3DPan>True</Enable3DPan>
+                        <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                        <Enable3DPriority>True</Enable3DPriority>
+                        <Enable3DFilter>False</Enable3DFilter>
+                      </Parameters>
+                    </Sound3D>
+                    <SequenceSoundFileType>Text</SequenceSoundFileType>
+                    <StartPosition>filter</StartPosition>
+                    <SoundSetBankReferences>
+                      <SoundSetBankReference Target="BANK_SE" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                      <SoundSetBankReference Target="" />
+                    </SoundSetBankReferences>
+                    <ChannelPriority>64</ChannelPriority>
+                    <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                    <FrontBypass>False</FrontBypass>
+                  </Parameters>
+                </SequenceSound>
+              </Items>
+            </SequenceSoundSet>
+          </Items>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@SequenceSounds">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <SequenceSound Name="SEQ_MARIOKART">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <FilePath>mid/kart64_title.mid</FilePath>
+                <Volume>64</Volume>
+                <PlayerPriority>64</PlayerPriority>
+                <PlayerReference Target="DEFAULT_PLAYER" />
+                <ActorPlayer>0</ActorPlayer>
+                <UserParameter>0</UserParameter>
+                <UserParameter1>0</UserParameter1>
+                <UserParameter2>0</UserParameter2>
+                <UserParameter3>0</UserParameter3>
+                <Sound3D>
+                  <Parameters>
+                    <DecayCurve3D>Log</DecayCurve3D>
+                    <DecayRatio3D>0.5</DecayRatio3D>
+                    <DopplerFactor3D>0</DopplerFactor3D>
+                    <Enable3DVolume>True</Enable3DVolume>
+                    <Enable3DPan>True</Enable3DPan>
+                    <Enable3DSurroundPan>True</Enable3DSurroundPan>
+                    <Enable3DPriority>True</Enable3DPriority>
+                    <Enable3DFilter>False</Enable3DFilter>
+                  </Parameters>
+                </Sound3D>
+                <SequenceSoundFileType>Smf</SequenceSoundFileType>
+                <StartPosition />
+                <SoundSetBankReferences>
+                  <SoundSetBankReference Target="BANK_BGM" />
+                  <SoundSetBankReference Target="" />
+                  <SoundSetBankReference Target="" />
+                  <SoundSetBankReference Target="" />
+                </SoundSetBankReferences>
+                <ChannelPriority>64</ChannelPriority>
+                <ReleasePriorityFixed>False</ReleasePriorityFixed>
+                <FrontBypass>False</FrontBypass>
+              </Parameters>
+            </SequenceSound>
+          </Items>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@SoundSetBanks">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <SoundSetBank Name="BANK_SE">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <FilePath>bnk/se_1.cbnk</FilePath>
+                <WaveArchiveReference Target="WARC_SAMPLE" />
+              </Parameters>
+            </SoundSetBank>
+            <SoundSetBank Name="BANK_SE2">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <FilePath>bnk/se_2.cbnk</FilePath>
+                <WaveArchiveReference Target="WARC_SAMPLE" />
+              </Parameters>
+            </SoundSetBank>
+            <SoundSetBank Name="BANK_BGM">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <FilePath>bnk/bgm_kart.cbnk</FilePath>
+                <WaveArchiveReference Target="WARC_BGM" />
+              </Parameters>
+            </SoundSetBank>
+          </Items>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@Players">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <Player Name="DEFAULT_PLAYER">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <PlayerSoundLimit>8</PlayerSoundLimit>
+                <PlayerHeapSize>0</PlayerHeapSize>
+              </Parameters>
+            </Player>
+          </Items>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@WaveArchives">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <WaveArchive Name="WARC_SAMPLE">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <WaveArchiveLoadType>Whole</WaveArchiveLoadType>
+              </Parameters>
+            </WaveArchive>
+            <WaveArchive Name="WARC_BGM">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <WaveArchiveLoadType>Whole</WaveArchiveLoadType>
+              </Parameters>
+            </WaveArchive>
+          </Items>
+        </SoundSetItemFolder>
+        <SoundSetItemFolder Name="@Groups">
+          <Parameters>
+            <Comment />
+            <Comment1 />
+            <Comment2 />
+            <Comment3 />
+            <Comment4 />
+            <Comment5 />
+            <Comment6 />
+            <Comment7 />
+            <Comment8 />
+            <Comment9 />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+          </Parameters>
+          <Items>
+            <Group Name="GROUP_BGM">
+              <Parameters>
+                <Comment />
+                <Comment1 />
+                <Comment2 />
+                <Comment3 />
+                <Comment4 />
+                <Comment5 />
+                <Comment6 />
+                <Comment7 />
+                <Comment8 />
+                <Comment9 />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <GroupOutputType>Embedding</GroupOutputType>
+              </Parameters>
+              <Items>
+                <GroupItem>
+                  <Parameters>
+                    <Comment />
+                    <Comment1 />
+                    <Comment2 />
+                    <Comment3 />
+                    <Comment4 />
+                    <Comment5 />
+                    <Comment6 />
+                    <Comment7 />
+                    <Comment8 />
+                    <Comment9 />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <TargetItemReference Target="SEQ_MARIOKART" />
+                    <GroupItemRegisterType>All</GroupItemRegisterType>
+                  </Parameters>
+                </GroupItem>
+              </Items>
+            </Group>
+          </Items>
+        </SoundSetItemFolder>
+      </Items>
+    </SoundSet>
+  </Body>
+</SoundSet>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|CTR">
+      <Configuration>Debug</Configuration>
+      <Platform>CTR</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Develop|CTR">
+      <Configuration>Develop</Configuration>
+      <Platform>CTR</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_NW|CTR">
+      <Configuration>Release_NW</Configuration>
+      <Platform>CTR</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|CTR">
+      <Configuration>Release</Configuration>
+      <Platform>CTR</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9504DBF7-B879-4217-BB47-286C32A4522E}</ProjectGuid>
+    <RootNamespace>shaders</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|CTR'" Label="Configuration">
+    <ConfigurationType>VertexShader</ConfigurationType>
+    <PlatformToolset>NW4C3.6.1-sdk11.1.0</PlatformToolset>
+    <ARMCC_VER>$(CTRSDK_RVCT_VER)</ARMCC_VER>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'" Label="Configuration">
+    <ConfigurationType>VertexShader</ConfigurationType>
+    <PlatformToolset>CTR-SDK5.2.0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'" Label="Configuration">
+    <ConfigurationType>VertexShader</ConfigurationType>
+    <PlatformToolset>NW4C3.6.1-sdk11.1.0</PlatformToolset>
+    <ARMCC_VER>$(CTRSDK_RVCT_VER)</ARMCC_VER>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'" Label="Configuration">
+    <ConfigurationType>VertexShader</ConfigurationType>
+    <PlatformToolset>NW4C3.6.1-sdk11.1.0</PlatformToolset>
+    <ARMCC_VER>$(CTRSDK_RVCT_VER)</ARMCC_VER>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|CTR'">
+    <ConfigurationType>VertexShader</ConfigurationType>
+    <PlatformToolset>CTR-SDK4.2.3</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ctr2_asm.props" Condition="(exists('$(VCTargetsPath)\BuildCustomizations\ctr2_asm.props') and '$(ConfigurationType)' != 'VertexShader' and '$(ConfigurationType)' != 'PCH')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|CTR'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">
+    <VShaderAsm>
+      <PreprocessorDefinitions>NN_BUILD_DEBUG</PreprocessorDefinitions>
+      <SuppressWarning>true</SuppressWarning>
+    </VShaderAsm>
+    <VShaderLink>
+      <OutputFile>..\romfiles\$(ProjectName).shbin</OutputFile>
+      <GenerateMap>True</GenerateMap>
+      <DebugBuild>On</DebugBuild>
+      <InputFiles>
+      </InputFiles>
+      <CheckConsistency>true</CheckConsistency>
+    </VShaderLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">
+    <VShaderAsm>
+      <PreprocessorDefinitions>NN_BUILD_DEBUG</PreprocessorDefinitions>
+      <SuppressWarning>true</SuppressWarning>
+    </VShaderAsm>
+    <VShaderLink>
+      <OutputFile>..\romfiles\$(ProjectName).shbin</OutputFile>
+      <GenerateMap>True</GenerateMap>
+      <DebugBuild>On</DebugBuild>
+      <InputFiles>
+      </InputFiles>
+      <CheckConsistency>true</CheckConsistency>
+    </VShaderLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">
+    <VShaderAsm>
+      <PreprocessorDefinitions>NN_BUILD_DEVELOPMENT</PreprocessorDefinitions>
+    </VShaderAsm>
+    <VShaderLink>
+      <OutputFile>
+      </OutputFile>
+      <InputFiles>
+      </InputFiles>
+    </VShaderLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">
+    <VShaderAsm>
+      <PreprocessorDefinitions>NN_BUILD_RELEASE</PreprocessorDefinitions>
+    </VShaderAsm>
+    <VShaderLink>
+      <OutputFile>..\romfiles\$(ProjectName).shbin</OutputFile>
+      <InputFiles>
+      </InputFiles>
+    </VShaderLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|CTR'">
+    <VShaderAsm>
+      <PreprocessorDefinitions>NN_BUILD_DEBUG</PreprocessorDefinitions>
+    </VShaderAsm>
+    <VShaderLink>
+      <OutputFile>..\data\$(ProjectName).shbin</OutputFile>
+      <InputFiles>$(IntDir)\Tilemap_VShader.obj;$(IntDir)\Tilemap_GShader.obj;$(IntDir)\QuadRender_VShader.obj;$(IntDir)\QuadRender_GShader.obj</InputFiles>
+    </VShaderLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <VShaderAsm Include="QuadRender_GShader.vsh" />
+    <VShaderAsm Include="QuadRender_VShader.vsh" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ctr2_asm.targets" Condition="(exists('$(VCTargetsPath)\BuildCustomizations\ctr2_asm.targets') and '$(ConfigurationType)' != 'VertexShader' and '$(ConfigurationType)' != 'PCH')" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ctr2_items.targets" Condition="exists('$(VCTargetsPath)\BuildCustomizations\ctr2_items.targets')" />
+  </ImportGroup>
+</Project>

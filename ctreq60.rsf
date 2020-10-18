@@ -1,0 +1,38 @@
+# See the CTR-SDK documents - ctr_makerom - RSF for details.
+BasicInfo:
+  Title: $(TITLE)
+  ProductCode: "CTR-U-NSET"
+  Logo: Licensed
+  # Don't be alarmed, this is normal
+  BackupMemoryType: None
+
+TitleInfo:
+  Category: Application
+  UniqueId: 0xff3ff
+
+CardInfo:
+  MediaType: Card2
+
+Rom:
+	#can be 0,128,512 (for Card1)
+  #I think it should be multiple of 1MB for card2 (up to a maximum of half the value specified for BasicInfo/MediaSize) which probably defaults to 512MB.
+  #see this spreadsheet: file:///C:/ctr/CTR_SDK/documents/api/nn/fs/briefing/savedata_calc_user.html
+  SaveDataSize: 1MB
+  HostRoot: "$(ROMFS_ROOT)"
+  Reject:
+    - shaders_CTR.map
+    - shaders_CTR.perf.txt
+    - file_i_dont_want_in_rom.ext
+    - another_file_i_dont_want_in_rom.ext
+
+Option:
+  #Must be set to True for final submission
+  #Setting to False can save a tiny bit of time building big roms, or probably make it faster to zip/share with other developers.
+  #But in the interest of making this more ready-to-go I'm setting them all to true here
+  EnableCompress: True
+  EnableCrypt: True
+
+#the main thread stack size, and the remaster version (incremented for updates and patches)
+SystemControlInfo:
+  StackSize: 262144
+  RemasterVersion: 0

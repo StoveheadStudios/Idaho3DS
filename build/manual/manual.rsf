@@ -1,0 +1,11 @@
+BasicInfo:
+  Title      : manual
+  ContentType: Manual
+
+Rom:
+  HostRoot: "$(ROMFS_ROOT)"
+  Reject: 
+    - .*
+
+TitleInfo:
+  UniqueId: 0xff3ff

@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<SoundProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.6.0.0" Platform="Ctr" xmlns="NintendoWare.SoundFoundation.FileFormats.NintendoWare">
+  <Head>
+    <Title>TestSoundProject</Title>
+  </Head>
+  <Body>
+    <SoundProject>
+      <ProjectSoundSets>
+        <ProjectSoundSet Name="simple">
+          <Parameters>
+            <FilePath>simple.csst</FilePath>
+          </Parameters>
+        </ProjectSoundSet>
+      </ProjectSoundSets>
+      <SoundArchivePlayer>
+        <Parameters>
+          <SoundArchivePlayerSequenceSoundCount>16</SoundArchivePlayerSequenceSoundCount>
+          <SoundArchivePlayerSequenceTrackCount>32</SoundArchivePlayerSequenceTrackCount>
+          <SoundArchivePlayerStreamChannelCount>8</SoundArchivePlayerStreamChannelCount>
+          <SoundArchivePlayerStreamBufferTimes>1</SoundArchivePlayerStreamBufferTimes>
+          <SoundArchivePlayerStreamSoundCount>3</SoundArchivePlayerStreamSoundCount>
+          <SoundArchivePlayerWaveSoundCount>16</SoundArchivePlayerWaveSoundCount>
+        </Parameters>
+      </SoundArchivePlayer>
+      <Convert>
+        <Parameters>
+          <DoWarnUnreferencedItems>False</DoWarnUnreferencedItems>
+          <DoWarnDisableGroupItemTargets>False</DoWarnDisableGroupItemTargets>
+          <ExcludeStringTable>False</ExcludeStringTable>
+          <ExternalFileDirectoryPath>stream</ExternalFileDirectoryPath>
+          <UserManagementFileOutputDirectoryPath>userManagementFiles</UserManagementFileOutputDirectoryPath>
+          <IntermediateOutputDirectoryPath>cache</IntermediateOutputDirectoryPath>
+          <InGameEditCacheOutputDirectoryPath>editCache</InGameEditCacheOutputDirectoryPath>
+          <IsPreConvertCommandsEnabled>False</IsPreConvertCommandsEnabled>
+          <IsPostConvertCommandsEnabled>False</IsPostConvertCommandsEnabled>
+          <KeepIntermediateTextSequence>False</KeepIntermediateTextSequence>
+          <OutputLabel>False</OutputLabel>
+          <OutputDirectoryPath>output</OutputDirectoryPath>
+          <SmfTimebase>96</SmfTimebase>
+        </Parameters>
+        <PreConvertCommands />
+        <PostConvertCommands />
+      </Convert>
+      <ItemNaming>
+        <Parameters>
+          <BankNamePrefix>BANK_</BankNamePrefix>
+          <CaseChange>ToUpper</CaseChange>
+          <GroupNamePrefix>GROUP_</GroupNamePrefix>
+          <HasPrefix>True</HasPrefix>
+          <InstrumentNamePrefix>INST_</InstrumentNamePrefix>
+          <InvalidCharChange>ReplaceToUnderscore</InvalidCharChange>
+          <PlayerNamePrefix>PLAYER_</PlayerNamePrefix>
+          <SequenceSoundNamePrefix>SEQ_</SequenceSoundNamePrefix>
+          <SequenceSoundSetNamePrefix>SEQSET_</SequenceSoundSetNamePrefix>
+          <StreamSoundNamePrefix>STRM_</StreamSoundNamePrefix>
+          <WaveArchiveNamePrefix>WARC_</WaveArchiveNamePrefix>
+          <WaveSoundNamePrefix>WSD_</WaveSoundNamePrefix>
+          <WaveSoundSetNamePrefix>WSDSET_</WaveSoundSetNamePrefix>
+          <ItemPastePostfix>_copy</ItemPastePostfix>
+          <EnabledNameDelimiter>True</EnabledNameDelimiter>
+          <NameDelimiter>.</NameDelimiter>
+        </Parameters>
+      </ItemNaming>
+      <CommentColumnText>
+        <Parameters>
+          <CommentColumnText>コメント</CommentColumnText>
+          <Comment1ColumnText>コメント1</Comment1ColumnText>
+          <Comment2ColumnText>コメント2</Comment2ColumnText>
+          <Comment3ColumnText>コメント3</Comment3ColumnText>
+          <Comment4ColumnText>コメント4</Comment4ColumnText>
+          <Comment5ColumnText>コメント5</Comment5ColumnText>
+          <Comment6ColumnText>コメント6</Comment6ColumnText>
+          <Comment7ColumnText>コメント7</Comment7ColumnText>
+          <Comment8ColumnText>コメント8</Comment8ColumnText>
+          <Comment9ColumnText>コメント9</Comment9ColumnText>
+        </Parameters>
+      </CommentColumnText>
+      <ColorComment>
+        <Parameters>
+          <ColorComment0 />
+          <ColorComment1 />
+          <ColorComment2 />
+          <ColorComment3 />
+          <ColorComment4 />
+          <ColorComment5 />
+          <ColorComment6 />
+          <ColorComment7 />
+          <ColorComment8 />
+        </Parameters>
+      </ColorComment>
+      <UserCommands>
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+        <UserCommand Name="" Command="" IconFilePath="" />
+      </UserCommands>
+      <SoundListOutputs>
+        <SoundListOutput Name="Sample Settings" Title="simple Project Sound List" FilePath="simple.html" OutputType="EachSoundSet" IsIgnoreDisableItems="false">
+          <ListOutputs>
+            <ListOutput Name="Sounds">
+              <ListColumnOutputs>
+                <ListColumnOutput Name="ItemIndex" />
+                <ListColumnOutput Name="ItemType" />
+                <ListColumnOutput Name="Name" />
+                <ListColumnOutput Name="PlayerReference" />
+                <ListColumnOutput Name="PlayerPriority" />
+                <ListColumnOutput Name="Comment" />
+                <ListColumnOutput Name="ActorPlayer" IsOutput="false" />
+                <ListColumnOutput Name="Volume" IsOutput="false" />
+                <ListColumnOutput Name="UserParameter" IsOutput="false" />
+                <ListColumnOutput Name="UserParameter1" IsOutput="false" />
+                <ListColumnOutput Name="UserParameter2" IsOutput="false" />
+                <ListColumnOutput Name="UserParameter3" IsOutput="false" />
+                <ListColumnOutput Name="Comment1" IsOutput="false" />
+                <ListColumnOutput Name="Comment2" IsOutput="false" />
+                <ListColumnOutput Name="Comment3" IsOutput="false" />
+                <ListColumnOutput Name="Comment4" IsOutput="false" />
+                <ListColumnOutput Name="Comment5" IsOutput="false" />
+                <ListColumnOutput Name="Comment6" IsOutput="false" />
+                <ListColumnOutput Name="Comment7" IsOutput="false" />
+                <ListColumnOutput Name="Comment8" IsOutput="false" />
+                <ListColumnOutput Name="Comment9" IsOutput="false" />
+              </ListColumnOutputs>
+            </ListOutput>
+            <ListOutput Name="Groups">
+              <ListColumnOutputs>
+                <ListColumnOutput Name="ItemIndex" />
+                <ListColumnOutput Name="Name" />
+                <ListColumnOutput Name="Comment" />
+                <ListColumnOutput Name="Comment1" IsOutput="false" />
+                <ListColumnOutput Name="Comment2" IsOutput="false" />
+                <ListColumnOutput Name="Comment3" IsOutput="false" />
+                <ListColumnOutput Name="Comment4" IsOutput="false" />
+                <ListColumnOutput Name="Comment5" IsOutput="false" />
+                <ListColumnOutput Name="Comment6" IsOutput="false" />
+                <ListColumnOutput Name="Comment7" IsOutput="false" />
+                <ListColumnOutput Name="Comment8" IsOutput="false" />
+                <ListColumnOutput Name="Comment9" IsOutput="false" />
+              </ListColumnOutputs>
+            </ListOutput>
+            <ListOutput Name="Players">
+              <ListColumnOutputs>
+                <ListColumnOutput Name="ItemIndex" />
+                <ListColumnOutput Name="Name" />
+                <ListColumnOutput Name="PlayerSoundLimit" />
+                <ListColumnOutput Name="Comment" />
+                <ListColumnOutput Name="Comment1" IsOutput="false" />
+                <ListColumnOutput Name="Comment2" IsOutput="false" />
+                <ListColumnOutput Name="Comment3" IsOutput="false" />
+                <ListColumnOutput Name="Comment4" IsOutput="false" />
+                <ListColumnOutput Name="Comment5" IsOutput="false" />
+                <ListColumnOutput Name="Comment6" IsOutput="false" />
+                <ListColumnOutput Name="Comment7" IsOutput="false" />
+                <ListColumnOutput Name="Comment8" IsOutput="false" />
+                <ListColumnOutput Name="Comment9" IsOutput="false" />
+              </ListColumnOutputs>
+            </ListOutput>
+            <ListOutput Name="SoundSetBanks" IsOutput="false">
+              <ListColumnOutputs>
+                <ListColumnOutput Name="ItemIndex" />
+                <ListColumnOutput Name="Name" />
+                <ListColumnOutput Name="Comment" />
+                <ListColumnOutput Name="Comment1" IsOutput="false" />
+                <ListColumnOutput Name="Comment2" IsOutput="false" />
+                <ListColumnOutput Name="Comment3" IsOutput="false" />
+                <ListColumnOutput Name="Comment4" IsOutput="false" />
+                <ListColumnOutput Name="Comment5" IsOutput="false" />
+                <ListColumnOutput Name="Comment6" IsOutput="false" />
+                <ListColumnOutput Name="Comment7" IsOutput="false" />
+                <ListColumnOutput Name="Comment8" IsOutput="false" />
+                <ListColumnOutput Name="Comment9" IsOutput="false" />
+              </ListColumnOutputs>
+            </ListOutput>
+          </ListOutputs>
+        </SoundListOutput>
+      </SoundListOutputs>
+      <UserParameterSettings>
+        <UserParameterSetting Enabled="true">
+          <UserParameterStructures />
+        </UserParameterSetting>
+        <UserParameterSetting Enabled="false">
+          <UserParameterStructures />
+        </UserParameterSetting>
+        <UserParameterSetting Enabled="false">
+          <UserParameterStructures />
+        </UserParameterSetting>
+        <UserParameterSetting Enabled="false">
+          <UserParameterStructures />
+        </UserParameterSetting>
+      </UserParameterSettings>
+      <ProjectSetting>
+        <Parameters>
+          <ProjectComment />
+        </Parameters>
+      </ProjectSetting>
+      <FileEvent>
+        <Parameters>
+          <IsFileSavePreCommandEnabled>False</IsFileSavePreCommandEnabled>
+          <IsFileSavePostCommandEnabled>False</IsFileSavePostCommandEnabled>
+          <FileSavePreCommandPath />
+          <FileSavePostCommandPath />
+        </Parameters>
+      </FileEvent>
+      <SndEdit>
+        <Parameters>
+          <SyncChannel>10</SyncChannel>
+          <FuncChannel>11</FuncChannel>
+          <CtrlChannel>12</CtrlChannel>
+        </Parameters>
+      </SndEdit>
+    </SoundProject>
+  </Body>
+</SoundProject>

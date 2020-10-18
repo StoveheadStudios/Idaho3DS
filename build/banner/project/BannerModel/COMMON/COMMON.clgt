@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NintendoWareIntermediateFile>
+	<GraphicsContentCtr Version="1.3.0" Namespace="">
+		<EditData>
+			<MetaData>
+				<Key>MetaData</Key>
+				<Create Author="ghargrove" Date="2017-05-01T11:54:12" Source="Banner.max">
+					<ToolDescriptions Name="NW4C_ForBanner_Export for 3dsmax 2012 x64" Version="0.5.1a" />
+				</Create>
+				<Modify Date="2017-05-01T11:59:31">
+					<ToolDescriptions Name="NintendoWare Creative Studio For Banner." Version="1.3.1.42554" />
+				</Modify>
+			</MetaData>
+		</EditData>
+		<Lights>
+			<AmbientLightCtr Name="AmbientLight" IsBranchVisible="true" IsLightEnabled="true">
+				<AnimationGroupDescriptions>
+					<GraphicsAnimationGroupDescription Name="LightAnimation" EvaluationTiming="BeforeWorldUpdate">
+						<MemberInformationSet>
+							<AnimationMemberDescription BlendOperationName="Transform" IsBinarized="true">
+								<Path>Transform</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="RgbaColor" IsBinarized="true">
+								<Path>Ambient</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="Bool" IsBinarized="true">
+								<Path>IsLightEnabled</Path>
+							</AnimationMemberDescription>
+						</MemberInformationSet>
+					</GraphicsAnimationGroupDescription>
+				</AnimationGroupDescriptions>
+				<Transform>
+					<Scale X="1" Y="1" Z="1" />
+					<Rotate X="0" Y="0" Z="0" />
+					<Translate X="0" Y="0" Z="0" />
+				</Transform>
+				<Ambient R="0.47451" G="0.490196" B="0.52549" A="1" />
+			</AmbientLightCtr>
+			<FragmentLightCtr Name="Lighting_Bottom" IsBranchVisible="true" IsLightEnabled="true" LightKind="PointLight" IsTwoSideDiffuse="false" IsDistanceAttenuationEnabled="false" DistanceAttenuationStart="0" DistanceAttenuationEnd="1" IsInheritingDirectionRotate="false">
+				<AnimationGroupDescriptions>
+					<GraphicsAnimationGroupDescription Name="LightAnimation" EvaluationTiming="BeforeWorldUpdate">
+						<MemberInformationSet>
+							<AnimationMemberDescription BlendOperationName="Transform" IsBinarized="true">
+								<Path>Transform</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="RgbaColor" IsBinarized="true">
+								<Path>Ambient</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="RgbaColor" IsBinarized="true">
+								<Path>Diffuse</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="RgbaColor" IsBinarized="true">
+								<Path>Specular0</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="RgbaColor" IsBinarized="true">
+								<Path>Specular1</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="Vector3" IsBinarized="true">
+								<Path>Direction</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="Float" IsBinarized="true">
+								<Path>DistanceAttenuationStart</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="Float" IsBinarized="true">
+								<Path>DistanceAttenuationEnd</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="Bool" IsBinarized="true">
+								<Path>IsLightEnabled</Path>
+							</AnimationMemberDescription>
+						</MemberInformationSet>
+					</GraphicsAnimationGroupDescription>
+				</AnimationGroupDescriptions>
+				<Transform>
+					<Scale X="1" Y="1" Z="1" />
+					<Rotate X="0" Y="0" Z="0" />
+					<Translate X="-11.548" Y="-21.6695" Z="-13.4695" />
+				</Transform>
+				<Ambient R="0" G="0" B="0" A="1" />
+				<Diffuse R="0.147059" G="0.303922" B="0.5" A="1" />
+				<Specular0 R="0.147059" G="0.303922" B="0.5" A="1" />
+				<Specular1 R="0.147059" G="0.303922" B="0.5" A="1" />
+				<Direction X="0" Y="-1" Z="0" />
+				<NullDistanceSampler />
+				<AngleSampler IsAbs="true" Input="CosLightSpot" Scale="One">
+					<NullLookupTableCtr />
+				</AngleSampler>
+			</FragmentLightCtr>
+			<FragmentLightCtr Name="Lighting_Top" IsBranchVisible="true" IsLightEnabled="true" LightKind="PointLight" IsTwoSideDiffuse="false" IsDistanceAttenuationEnabled="false" DistanceAttenuationStart="0" DistanceAttenuationEnd="1" IsInheritingDirectionRotate="false">
+				<AnimationGroupDescriptions>
+					<GraphicsAnimationGroupDescription Name="LightAnimation" EvaluationTiming="BeforeWorldUpdate">
+						<MemberInformationSet>
+							<AnimationMemberDescription BlendOperationName="Transform" IsBinarized="true">
+								<Path>Transform</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="RgbaColor" IsBinarized="true">
+								<Path>Ambient</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="RgbaColor" IsBinarized="true">
+								<Path>Diffuse</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="RgbaColor" IsBinarized="true">
+								<Path>Specular0</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="RgbaColor" IsBinarized="true">
+								<Path>Specular1</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="Vector3" IsBinarized="true">
+								<Path>Direction</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="Float" IsBinarized="true">
+								<Path>DistanceAttenuationStart</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="Float" IsBinarized="true">
+								<Path>DistanceAttenuationEnd</Path>
+							</AnimationMemberDescription>
+							<AnimationMemberDescription BlendOperationName="Bool" IsBinarized="true">
+								<Path>IsLightEnabled</Path>
+							</AnimationMemberDescription>
+						</MemberInformationSet>
+					</GraphicsAnimationGroupDescription>
+				</AnimationGroupDescriptions>
+				<Transform>
+					<Scale X="1" Y="1" Z="1" />
+					<Rotate X="0" Y="0" Z="0" />
+					<Translate X="11.3722" Y="24.2782" Z="18.6883" />
+				</Transform>
+				<Ambient R="0" G="0" B="0" A="1" />
+				<Diffuse R="0.790588" G="0.8" B="0.715294" A="1" />
+				<Specular0 R="0.790588" G="0.8" B="0.715294" A="1" />
+				<Specular1 R="0.790588" G="0.8" B="0.715294" A="1" />
+				<Direction X="0" Y="-1" Z="0" />
+				<NullDistanceSampler />
+				<AngleSampler IsAbs="true" Input="CosLightSpot" Scale="One">
+					<NullLookupTableCtr />
+				</AngleSampler>
+			</FragmentLightCtr>
+		</Lights>
+	</GraphicsContentCtr>
+</NintendoWareIntermediateFile>

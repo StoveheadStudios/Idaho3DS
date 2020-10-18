@@ -1,0 +1,321 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;    SeqArc for Sample SE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ノートコマンドだけ
+; コイン音
+coin:
+    prg 0
+    as5 127, 6
+    release 100
+    ds6 127, 48
+    fin
+    
+
+; ジャンプによるループ（無限の繰り返し）
+; 救急車
+jump_seq:
+    prg 0
+    pan 127
+_loop_start:
+    frontbypass_on
+    bn4 127, 48
+    gn4 127, 48
+    frontbypass_off
+    bn4 127, 48
+    gn4 127, 48
+    jump _loop_start
+
+
+; ループを使った繰り返し再生
+; 単純に６回繰り返す
+loop_seq:
+    prg 0
+    loop_start 6
+    cn5 127,10
+    gn4 127,10
+    loop_end
+    fin
+
+
+; コールを使ったパターン再生
+; 同じフレーズをパターン化し、パンを設定してそれぞれ同じフレーズを鳴らす。
+call_seq:
+    prg 0
+    pan 0
+    call _pattern
+    pan 64
+    call _pattern
+    pan 127
+    call _pattern
+    fin
+
+_pattern:
+    cn5 127,10
+    gn4 127,10
+    cn5 127,10
+    gn4 127,10
+    ret
+
+
+; ポルタメント
+; cn4->cn5、cn5->cn3、cn4（ポルタメントなし）の順に発音する
+porta_seq:
+    prg 0
+    porta cn4
+    cn5 127,48
+    cn3 127,48
+    porta_off
+    cn4 127,48
+    fin
+
+
+; porta_time を使ったポルタメント
+; cn4->cn5、cn5->cn3、cn4（ポルタメントなし）の順に発音する
+porta_time_seq:
+    prg 0
+    porta cn4
+    porta_time 10
+    cn5 127,48
+    cn3 127,48
+    porta_off
+    cn4 127,48
+    fin
+
+; スイープ
+; 各音の始めが、全音下からスイープする
+sweep_seq:
+    prg 0
+    porta_time 16
+    sweep_pitch -64*2
+    cn5 127,48
+    bn4 127,48
+    an4 127,48
+    gn4 127,48
+    fn4 127,48
+    en4 127,48
+    dn4 127,48
+    cn4 127,48
+    fin
+
+
+; モジュレーション
+; 音程のモジュレーションでノートオンするごとにモジュレーション速度が速くなる
+mod_seq:
+    prg 0
+    mod_type MOD_TYPE_PITCH
+    mod_depth 64
+    mod_speed 24
+    cn5 127,48
+    mod_speed 48
+    cn5 127,48
+    mod_speed 96
+    cn5 127,48
+    fin
+
+
+; タイモード
+; 上記のモジュレーションシーケンスでノートコマンドをタイで結ぶことにより、
+; ノートオンした音のモジュレーション速度が速くなっていく
+tie_seq:
+    prg 0
+    mod_type MOD_TYPE_PITCH
+    mod_depth 64
+    mod_speed 24
+    tieon
+    cn5 127,48
+    mod_speed 48
+    cn5 127,48
+    mod_speed 96
+    cn5 127,48
+    tieoff
+    fin
+
+
+; 時間変化付きコマンドとランダムコマンドの組み合わせ
+; 音量の目標値は0から64の間のランダム値
+; 変化にかける時間は0から54の間のランダム値
+move_volume_seq:
+    prg 0
+    volume_r_tr 0, 64, 0, 54
+    as5 127, 6
+    ds6 127, 48
+    fin
+
+
+; ノートウエイトなし
+; スーパーマリオのイントロの3音ポリフォニックノートを一つのトラックで行っている
+super_mario:
+    prg 0
+    tempo 103
+    notewait_off
+    en5 100,10
+    fs4 100,10
+    dn3 100,10
+    wait 12
+    en5 100,12
+    fs4 100,12
+    dn3 100,12
+    wait 24
+    en5 100,12
+    fs4 100,12
+    dn3 100,12
+    wait 24
+    cn5 100,10
+    fs4 100,10
+    dn3 100,10
+    wait 12
+    en5 100,12
+    fs4 100,12
+    dn3 100,12
+    wait 24
+    gn5 100,12
+    gn4 100,12
+    gn3 100,12
+    wait 48
+    gn4 100,12
+    gn3 100,12
+    wait 48
+    fin
+
+
+; トラックオープン
+; 上記のノートウエイトなしと同じ発音を３トラックに分けて、１トラック１音で行っている
+; さらにトラック３でノイズのトラックも付加している。
+opentrack_seq:
+    alloctrack TRACK_1 | TRACK_2 | TRACK_3
+    opentrack 1, _seq_1
+    opentrack 2, _seq_2
+    opentrack 3, _seq_3
+    prg 0
+    tempo 103
+    en5 100,10
+    wait 2
+    en5 100,12
+    wait 12
+    en5 100,12
+    wait 12
+    cn5 100,10
+    wait 2
+    en5 100,12
+    wait 12
+    gn5 100,12
+    wait 36
+    gn4 100,12
+    wait 36
+    fin
+
+_seq_1:
+    prg 0
+    fs4 100,10
+    wait 2
+    fs4 100,12
+    wait 12
+    fs4 100,12
+    wait 12
+    fs4 100,10
+    wait 2
+    fs4 100,12
+    wait 12
+    gn4 100,12
+    wait 36
+    gn3 100,12
+    wait 36
+    fin
+
+_seq_2:
+    prg 0
+    dn3 100,10
+    wait 2
+    dn3 100,12
+    wait 12
+    dn3 100,12
+    wait 12
+    dn3 100,10
+    wait 2
+    dn3 100,12
+    wait 12
+    gn3 100,12
+    wait 36
+    fin
+
+_seq_3:
+    prg 1
+    volume 90
+    en4 100,4
+    wait 20
+    cn4 100,2
+    wait 10
+    en4 100,4
+    wait 20
+    cn4 100,2
+    wait 10
+    en4 100,4
+    wait 20
+    en4 100,4
+    wait 32
+    en4 100,6
+    wait 6
+    wait 12
+    en4 100,2
+    wait 10
+    en4 100,2
+    wait 10
+    en4 100,2
+    wait 10
+    fin
+
+
+bank_select_seq:
+    setvar VAR_0, 0
+    prg 0
+    cn5 127, 30
+    bank_select_r 0, 1
+    en5 100, 30
+    bank_select_v VAR_0
+    gn5 127, 30
+    fin
+
+
+filter:
+    prg 0
+    release 114
+
+    biquad_value 100  ;; 0-127 を指定。0 が効果なし。127 が効果が最大。
+    biquad_type 0     ;; フィルタ適用なし。
+    call _sub
+    biquad_type 1     ;; biquad LPF
+    call _sub
+    biquad_type 2     ;; biquad HPF
+    call _sub
+    biquad_type 3     ;; biquad BPF (512Hz)
+    call _sub
+    biquad_type 4     ;; biquad BPF (1024Hz)
+    call _sub
+    biquad_type 5     ;; biquad BPF (2048Hz)
+    call _sub
+
+    biquad_type 0     ;; フィルタ適用なしに戻す。
+
+    lpf_cutoff 0      ;; lpf_cutoff 0 で、LPF が最大までかかる。
+    call _sub
+    lpf_cutoff 16
+    call _sub
+    lpf_cutoff 32
+    call _sub
+    lpf_cutoff 48
+    call _sub
+    lpf_cutoff 64     ;; lpf_cutoff 64 (デフォルト値) で LPF がかからなくなる。
+    call _sub
+    fin
+
+_sub:
+    cn5 127, 20
+    wait 10
+    en5 127, 20
+    wait 10
+    gn5 127, 20
+    wait 10
+    cn6 127, 20
+    wait 10
+    ret

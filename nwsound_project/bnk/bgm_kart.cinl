@@ -1,0 +1,11 @@
+#define INST_000	0
+#define INST_001	1
+#define INST_001_0	2
+#define INST_003	3
+#define INST_003_0	4
+#define INST_005	5
+#define INST_006	6
+#define INST_007	7
+#define INST_008	11
+#define INST_012	12
+#define INST_013	127

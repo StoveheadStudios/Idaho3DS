@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="ctreq60.rsf" />
+    <None Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{ef1a5c59-29f0-4dd4-8107-2a0910561a1a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\VRamAllocator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mem.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game_main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rvct_stdio.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QR.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nwsound.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SaveDataManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SaveManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\VRamAllocator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mem.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QR.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MatrixStack.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nwsound.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SaveDataManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SaveManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

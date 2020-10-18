@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_NW|CTR">
+      <Configuration>Debug_NW</Configuration>
+      <Platform>CTR</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|CTR">
+      <Configuration>Debug</Configuration>
+      <Platform>CTR</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Develop|CTR">
+      <Configuration>Develop</Configuration>
+      <Platform>CTR</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_NW|CTR">
+      <Configuration>Release_NW</Configuration>
+      <Platform>CTR</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|CTR">
+      <Configuration>Release</Configuration>
+      <Platform>CTR</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">
+    <CTRApplicationType>CARD</CTRApplicationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'" Label="Configuration">
+    <CTRApplicationType>CARD</CTRApplicationType>
+    <PlatformToolset>NW4C3.7.4-sdk11.4.0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>CTR-SDK11.3.0</PlatformToolset>
+    <CTRApplicationType>CARD</CTRApplicationType>
+    <ARMCC_VER>$(CTRSDK_RVCT_VER)</ARMCC_VER>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>CTR-SDK11.3.0</PlatformToolset>
+    <CTRApplicationType>CARD</CTRApplicationType>
+    <ARMCC_VER>$(CTRSDK_RVCT_VER)</ARMCC_VER>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>NW4C3.7.4-sdk11.4.0</PlatformToolset>
+    <CTRApplicationType>CARD</CTRApplicationType>
+    <ARMCC_VER>$(CTRSDK_RVCT_VER)</ARMCC_VER>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ctr2_asm.props" Condition="(exists('$(VCTargetsPath)\BuildCustomizations\ctr2_asm.props') and '$(ConfigurationType)' != 'VertexShader' and '$(ConfigurationType)' != 'PCH')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">
+    <TargetName>$(ProjectName)_NW</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">
+    <TargetName>$(ProjectName)_NW</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ProjectReference>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">true</LinkLibraryDependencies>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">true</LinkLibraryDependencies>
+      <LinkLibraryDependencies Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">true</LinkLibraryDependencies>
+    </ProjectReference>
+    <ClCompile>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">0</OptimizeLevel>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">0</OptimizeLevel>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">calls</OptimizeRetain>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">calls</OptimizeRetain>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">NN_BUILD_DEBUG;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_ENABLE_HOST_IO=1;NN_BUILD_VERBOSE;NN_BUILD_NOOPT;NN_DEBUGGER_KMC_PARTNER</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">USE_NW=1;NN_BUILD_DEBUG;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_ENABLE_HOST_IO=1;NN_BUILD_VERBOSE;NN_BUILD_NOOPT;NN_DEBUGGER_KMC_PARTNER;NN_SWITCH_ENABLE_MEMBER_NAME_SHORTCUT=1</PreprocessorDefinitions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">true</GNU_Extensions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">true</GNU_Extensions>
+    </ClCompile>
+    <ASM>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">0</OptimizeLevel>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">0</OptimizeLevel>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">calls</OptimizeRetain>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">calls</OptimizeRetain>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">NN_BUILD_DEBUG;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_ENABLE_HOST_IO=1;NN_BUILD_VERBOSE;NN_BUILD_NOOPT;NN_DEBUGGER_KMC_PARTNER</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">NN_BUILD_DEBUG;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_ENABLE_HOST_IO=1;NN_BUILD_VERBOSE;NN_BUILD_NOOPT;NN_DEBUGGER_KMC_PARTNER</PreprocessorDefinitions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">False</GNU_Extensions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">False</GNU_Extensions>
+    </ASM>
+    <Link>
+      <Bestdebug Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">On</Bestdebug>
+      <Bestdebug Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">On</Bestdebug>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">$(CTRSDK_ROOT)\libraries\CTR-TS.Process.MPCore\noopt</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">$(CTRSDK_ROOT)\libraries\CTR-TS.Process.MPCore\noopt;$(NW4C_ROOT)\eft\lib\CTR-TS.Process.MPCore\noopt;$(NW4C_ROOT)\font2\lib\CTR-TS.Process.MPCore\noopt;$(NW4C_ROOT)\h3d\lib\CTR-TS.Process.MPCore\noopt;$(NW4C_ROOT)\lyt2\lib\CTR-TS.Process.MPCore\noopt;$(NW4C_ROOT)\snd\lib\CTR-TS.Process.MPCore\noopt;$(NW4C_ROOT)\sys\lib\CTR-TS.Process.MPCore\noopt</AdditionalLibraryDirectories>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">crt0.$(CTROptimizeOption).o;libgles2.$(CTROptimizeOption).a;libnn_ac.$(CTROptimizeOption).a;libnn_act.$(CTROptimizeOption).a;libnn_applet.$(CTROptimizeOption).a;libnn_boss.$(CTROptimizeOption).a;libnn_camera.$(CTROptimizeOption).a;libnn_ec.$(CTROptimizeOption).a;libnn_enc.$(CTROptimizeOption).a;libnn_cec.$(CTROptimizeOption).a;libnn_cfg.$(CTROptimizeOption).a;libnn_crypto.$(CTROptimizeOption).a;libnn_cryptoRsa.$(CTROptimizeOption).a;libnn_cx.$(CTROptimizeOption).a;libnn_dbg.$(CTROptimizeOption).a;libnn_dbm.$(CTROptimizeOption).a;libnn_dev.$(CTROptimizeOption).a;libnn_dlp.$(CTROptimizeOption).a;libnn_dsp.$(CTROptimizeOption).a;libnn_err.$(CTROptimizeOption).a;libnn_erreula.$(CTROptimizeOption).a;libnn_fnd.$(CTROptimizeOption).a;libnn_font.$(CTROptimizeOption).a;libnn_friends.$(CTROptimizeOption).a;libnn_fs.$(CTROptimizeOption).a;libnn_fshio.$(CTROptimizeOption).a;libnn_gd.$(CTROptimizeOption).a;libnn_gr.$(CTROptimizeOption).a;libnn_gxlow.$(CTROptimizeOption).a;libnn_hid.$(CTROptimizeOption).a;libnn_hidlow.$(CTROptimizeOption).a;libnn_hio.$(CTROptimizeOption).a;libnn_http.$(CTROptimizeOption).a;libnn_init.$(CTROptimizeOption).a;libnn_ir.$(CTROptimizeOption).a;libnn_jpegmp.$(CTROptimizeOption).a;libnn_math.$(CTROptimizeOption).a;libnn_mic.$(CTROptimizeOption).a;libnn_midi.$(CTROptimizeOption).a;libnn_ndm.$(CTROptimizeOption).a;libnn_news.$(CTROptimizeOption).a;libnn_nfp.$(CTROptimizeOption).a;libnn_ngc.$(CTROptimizeOption).a;libnn_nstd.$(CTROptimizeOption).a;libnn_nwm.$(CTROptimizeOption).a;libnn_olv.$(CTROptimizeOption).a;libnn_os.$(CTROptimizeOption).a;libnn_phtsel.$(CTROptimizeOption).a;libnn_pl.$(CTROptimizeOption).a;libnn_ptm.$(CTROptimizeOption).a;libnn_rdt.$(CTROptimizeOption).a;libnn_snd.$(CTROptimizeOption).a;libnn_socket.$(CTROptimizeOption).a;libnn_srv.$(CTROptimizeOption).a;libnn_ssl.$(CTROptimizeOption).a;libnn_svc.$(CTROptimizeOption).a;libnn_svcDbg.$(CTROptimizeOption).a;libnn_swkbd.$(CTROptimizeOption).a;libnn_tpl.$(CTROptimizeOption).a;libnn_ubl.$(CTROptimizeOption).a;libnn_uds.$(CTROptimizeOption).a;libnn_ulcd.$(CTROptimizeOption).a;libnn_util.$(CTROptimizeOption).a;libnn_voicesel.$(CTROptimizeOption).a;libnn_y2r.$(CTROptimizeOption).a</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug_NW|CTR'">crt0.$(CTROptimizeOption).o;libgles2.$(CTROptimizeOption).a;libnn_ac.$(CTROptimizeOption).a;libnn_act.$(CTROptimizeOption).a;libnn_applet.$(CTROptimizeOption).a;libnn_boss.$(CTROptimizeOption).a;libnn_camera.$(CTROptimizeOption).a;libnn_ec.$(CTROptimizeOption).a;libnn_enc.$(CTROptimizeOption).a;libnn_cec.$(CTROptimizeOption).a;libnn_cfg.$(CTROptimizeOption).a;libnn_crypto.$(CTROptimizeOption).a;libnn_cryptoRsa.$(CTROptimizeOption).a;libnn_cx.$(CTROptimizeOption).a;libnn_dbg.$(CTROptimizeOption).a;libnn_dbm.$(CTROptimizeOption).a;libnn_dev.$(CTROptimizeOption).a;libnn_dlp.$(CTROptimizeOption).a;libnn_dsp.$(CTROptimizeOption).a;libnn_err.$(CTROptimizeOption).a;libnn_erreula.$(CTROptimizeOption).a;libnn_fnd.$(CTROptimizeOption).a;libnn_font.$(CTROptimizeOption).a;libnn_friends.$(CTROptimizeOption).a;libnn_fs.$(CTROptimizeOption).a;libnn_fshio.$(CTROptimizeOption).a;libnn_gd.$(CTROptimizeOption).a;libnn_gr.$(CTROptimizeOption).a;libnn_gxlow.$(CTROptimizeOption).a;libnn_hid.$(CTROptimizeOption).a;libnn_hidlow.$(CTROptimizeOption).a;libnn_hio.$(CTROptimizeOption).a;libnn_http.$(CTROptimizeOption).a;libnn_init.$(CTROptimizeOption).a;libnn_ir.$(CTROptimizeOption).a;libnn_jpegmp.$(CTROptimizeOption).a;libnn_math.$(CTROptimizeOption).a;libnn_mic.$(CTROptimizeOption).a;libnn_midi.$(CTROptimizeOption).a;libnn_ndm.$(CTROptimizeOption).a;libnn_news.$(CTROptimizeOption).a;libnn_nfp.$(CTROptimizeOption).a;libnn_ngc.$(CTROptimizeOption).a;libnn_nstd.$(CTROptimizeOption).a;libnn_nwm.$(CTROptimizeOption).a;libnn_olv.$(CTROptimizeOption).a;libnn_os.$(CTROptimizeOption).a;libnn_phtsel.$(CTROptimizeOption).a;libnn_pl.$(CTROptimizeOption).a;libnn_ptm.$(CTROptimizeOption).a;libnn_rdt.$(CTROptimizeOption).a;libnn_snd.$(CTROptimizeOption).a;libnn_socket.$(CTROptimizeOption).a;libnn_srv.$(CTROptimizeOption).a;libnn_ssl.$(CTROptimizeOption).a;libnn_svc.$(CTROptimizeOption).a;libnn_svcDbg.$(CTROptimizeOption).a;libnn_swkbd.$(CTROptimizeOption).a;libnn_tpl.$(CTROptimizeOption).a;libnn_ubl.$(CTROptimizeOption).a;libnn_uds.$(CTROptimizeOption).a;libnn_ulcd.$(CTROptimizeOption).a;libnn_util.$(CTROptimizeOption).a;libnn_voicesel.$(CTROptimizeOption).a;libnn_y2r.$(CTROptimizeOption).a;libnw_snd.$(CTROptimizeOption).a;libnw_sys.$(CTROptimizeOption).a</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">0</OptimizeLevel>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">calls</OptimizeRetain>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">NN_BUILD_DEVELOPMENT;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_ENABLE_HOST_IO=1;NN_BUILD_VERBOSE;NN_DEBUGGER_KMC_PARTNER</PreprocessorDefinitions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">True</GNU_Extensions>
+    </ClCompile>
+    <ASM>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">0</OptimizeLevel>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">calls</OptimizeRetain>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">NN_BUILD_DEVELOPMENT;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_ENABLE_HOST_IO=1;NN_BUILD_VERBOSE;NN_DEBUGGER_KMC_PARTNER</PreprocessorDefinitions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">True</GNU_Extensions>
+    </ASM>
+    <Link>
+      <EnableInline Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">False</EnableInline>
+      <EnableTailreorder Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">False</EnableTailreorder>
+      <Bestdebug Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">On</Bestdebug>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">$(CTRSDK_ROOT)\libraries\CTR-TS.Process.MPCore\verbose</AdditionalLibraryDirectories>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Develop|CTR'">crt0.$(CTROptimizeOption).o;libgles2.$(CTROptimizeOption).a;libnn_ac.$(CTROptimizeOption).a;libnn_act.$(CTROptimizeOption).a;libnn_applet.$(CTROptimizeOption).a;libnn_boss.$(CTROptimizeOption).a;libnn_camera.$(CTROptimizeOption).a;libnn_ec.$(CTROptimizeOption).a;libnn_enc.$(CTROptimizeOption).a;libnn_cec.$(CTROptimizeOption).a;libnn_cfg.$(CTROptimizeOption).a;libnn_crypto.$(CTROptimizeOption).a;libnn_cryptoRsa.$(CTROptimizeOption).a;libnn_cx.$(CTROptimizeOption).a;libnn_dbg.$(CTROptimizeOption).a;libnn_dbm.$(CTROptimizeOption).a;libnn_dev.$(CTROptimizeOption).a;libnn_dlp.$(CTROptimizeOption).a;libnn_dsp.$(CTROptimizeOption).a;libnn_err.$(CTROptimizeOption).a;libnn_erreula.$(CTROptimizeOption).a;libnn_fnd.$(CTROptimizeOption).a;libnn_font.$(CTROptimizeOption).a;libnn_friends.$(CTROptimizeOption).a;libnn_fs.$(CTROptimizeOption).a;libnn_fshio.$(CTROptimizeOption).a;libnn_gd.$(CTROptimizeOption).a;libnn_gr.$(CTROptimizeOption).a;libnn_gxlow.$(CTROptimizeOption).a;libnn_hid.$(CTROptimizeOption).a;libnn_hidlow.$(CTROptimizeOption).a;libnn_hio.$(CTROptimizeOption).a;libnn_http.$(CTROptimizeOption).a;libnn_init.$(CTROptimizeOption).a;libnn_ir.$(CTROptimizeOption).a;libnn_jpegmp.$(CTROptimizeOption).a;libnn_math.$(CTROptimizeOption).a;libnn_mic.$(CTROptimizeOption).a;libnn_midi.$(CTROptimizeOption).a;libnn_ndm.$(CTROptimizeOption).a;libnn_news.$(CTROptimizeOption).a;libnn_nfp.$(CTROptimizeOption).a;libnn_ngc.$(CTROptimizeOption).a;libnn_nstd.$(CTROptimizeOption).a;libnn_nwm.$(CTROptimizeOption).a;libnn_olv.$(CTROptimizeOption).a;libnn_os.$(CTROptimizeOption).a;libnn_phtsel.$(CTROptimizeOption).a;libnn_pl.$(CTROptimizeOption).a;libnn_ptm.$(CTROptimizeOption).a;libnn_rdt.$(CTROptimizeOption).a;libnn_snd.$(CTROptimizeOption).a;libnn_socket.$(CTROptimizeOption).a;libnn_srv.$(CTROptimizeOption).a;libnn_ssl.$(CTROptimizeOption).a;libnn_svc.$(CTROptimizeOption).a;libnn_svcDbg.$(CTROptimizeOption).a;libnn_swkbd.$(CTROptimizeOption).a;libnn_tpl.$(CTROptimizeOption).a;libnn_ubl.$(CTROptimizeOption).a;libnn_uds.$(CTROptimizeOption).a;libnn_ulcd.$(CTROptimizeOption).a;libnn_util.$(CTROptimizeOption).a;libnn_voicesel.$(CTROptimizeOption).a;libnn_y2r.$(CTROptimizeOption).a;librtport.$(CTROptimizeOption).a</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">3</OptimizeLevel>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">3</OptimizeLevel>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">none</OptimizeRetain>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">none</OptimizeRetain>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">NN_BUILD_RELEASE;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_DISABLE_DEBUG_PRINT=1;NN_SWITCH_DISABLE_DEBUG_PRINT_FOR_SDK=1;NN_SWITCH_DISABLE_ASSERT_WARNING=1;NN_SWITCH_DISABLE_ASSERT_WARNING_FOR_SDK=1;NN_DEBUGGER_KMC_PARTNER</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">USE_NW=1;NN_BUILD_RELEASE;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_DISABLE_DEBUG_PRINT=1;NN_SWITCH_DISABLE_DEBUG_PRINT_FOR_SDK=1;NN_SWITCH_DISABLE_ASSERT_WARNING=1;NN_SWITCH_DISABLE_ASSERT_WARNING_FOR_SDK=1;NN_DEBUGGER_KMC_PARTNER;NN_SWITCH_ENABLE_MEMBER_NAME_SHORTCUT=1</PreprocessorDefinitions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">True</GNU_Extensions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">True</GNU_Extensions>
+    </ClCompile>
+    <ASM>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">3</OptimizeLevel>
+      <OptimizeLevel Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">3</OptimizeLevel>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">none</OptimizeRetain>
+      <OptimizeRetain Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">none</OptimizeRetain>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">NN_BUILD_RELEASE;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_DISABLE_DEBUG_PRINT=1;NN_SWITCH_DISABLE_DEBUG_PRINT_FOR_SDK=1;NN_SWITCH_DISABLE_ASSERT_WARNING=1;NN_SWITCH_DISABLE_ASSERT_WARNING_FOR_SDK=1;NN_DEBUGGER_KMC_PARTNER</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">NN_BUILD_RELEASE;NN_COMPILER_RVCT;NN_COMPILER_RVCT_VERSION_MAJOR=$(CTRSDK_RVCT_VER_MAJOR);NN_PROCESSOR_ARM;NN_PROCESSOR_ARM11MPCORE;NN_PROCESSOR_ARM_V6;NN_PROCESSOR_ARM_VFP_V2;NN_HARDWARE_CTR;NN_PLATFORM_CTR;NN_HARDWARE_CTR_TS;NN_SYSTEM_PROCESS;NN_SWITCH_DISABLE_DEBUG_PRINT=1;NN_SWITCH_DISABLE_DEBUG_PRINT_FOR_SDK=1;NN_SWITCH_DISABLE_ASSERT_WARNING=1;NN_SWITCH_DISABLE_ASSERT_WARNING_FOR_SDK=1;NN_DEBUGGER_KMC_PARTNER</PreprocessorDefinitions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">True</GNU_Extensions>
+      <GNU_Extensions Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">True</GNU_Extensions>
+    </ASM>
+    <Link>
+      <EnableInline Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">True</EnableInline>
+      <EnableInline Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">True</EnableInline>
+      <EnableTailreorder Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">True</EnableTailreorder>
+      <EnableTailreorder Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">True</EnableTailreorder>
+      <Bestdebug Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">Off</Bestdebug>
+      <Bestdebug Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">Off</Bestdebug>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">$(CTRSDK_ROOT)\libraries\CTR-TS.Process.MPCore\release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">$(CTRSDK_ROOT)\libraries\CTR-TS.Process.MPCore\release;$(NW4C_ROOT)\eft\lib\CTR-TS.Process.MPCore\release;$(NW4C_ROOT)\font2\lib\CTR-TS.Process.MPCore\release;$(NW4C_ROOT)\h3d\lib\CTR-TS.Process.MPCore\release;$(NW4C_ROOT)\lyt2\lib\CTR-TS.Process.MPCore\release;$(NW4C_ROOT)\snd\lib\CTR-TS.Process.MPCore\release;$(NW4C_ROOT)\sys\lib\CTR-TS.Process.MPCore\release</AdditionalLibraryDirectories>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|CTR'">crt0.$(CTROptimizeOption).o;libgles2.$(CTROptimizeOption).a;libnn_ac.$(CTROptimizeOption).a;libnn_act.$(CTROptimizeOption).a;libnn_applet.$(CTROptimizeOption).a;libnn_boss.$(CTROptimizeOption).a;libnn_camera.$(CTROptimizeOption).a;libnn_ec.$(CTROptimizeOption).a;libnn_enc.$(CTROptimizeOption).a;libnn_cec.$(CTROptimizeOption).a;libnn_cfg.$(CTROptimizeOption).a;libnn_crypto.$(CTROptimizeOption).a;libnn_cryptoRsa.$(CTROptimizeOption).a;libnn_cx.$(CTROptimizeOption).a;libnn_dbg.$(CTROptimizeOption).a;libnn_dbm.$(CTROptimizeOption).a;libnn_dlp.$(CTROptimizeOption).a;libnn_dsp.$(CTROptimizeOption).a;libnn_err.$(CTROptimizeOption).a;libnn_erreula.$(CTROptimizeOption).a;libnn_fnd.$(CTROptimizeOption).a;libnn_font.$(CTROptimizeOption).a;libnn_friends.$(CTROptimizeOption).a;libnn_fs.$(CTROptimizeOption).a;libnn_gd.$(CTROptimizeOption).a;libnn_gr.$(CTROptimizeOption).a;libnn_gxlow.$(CTROptimizeOption).a;libnn_hid.$(CTROptimizeOption).a;libnn_hidlow.$(CTROptimizeOption).a;libnn_http.$(CTROptimizeOption).a;libnn_init.$(CTROptimizeOption).a;libnn_ir.$(CTROptimizeOption).a;libnn_jpegmp.$(CTROptimizeOption).a;libnn_math.$(CTROptimizeOption).a;libnn_mic.$(CTROptimizeOption).a;libnn_ndm.$(CTROptimizeOption).a;libnn_news.$(CTROptimizeOption).a;libnn_nfp.$(CTROptimizeOption).a;libnn_ngc.$(CTROptimizeOption).a;libnn_nstd.$(CTROptimizeOption).a;libnn_nwm.$(CTROptimizeOption).a;libnn_olv.$(CTROptimizeOption).a;libnn_os.$(CTROptimizeOption).a;libnn_phtsel.$(CTROptimizeOption).a;libnn_pl.$(CTROptimizeOption).a;libnn_ptm.$(CTROptimizeOption).a;libnn_rdt.$(CTROptimizeOption).a;libnn_snd.$(CTROptimizeOption).a;libnn_socket.$(CTROptimizeOption).a;libnn_srv.$(CTROptimizeOption).a;libnn_ssl.$(CTROptimizeOption).a;libnn_svc.$(CTROptimizeOption).a;libnn_svcDbg.$(CTROptimizeOption).a;libnn_swkbd.$(CTROptimizeOption).a;libnn_tpl.$(CTROptimizeOption).a;libnn_ubl.$(CTROptimizeOption).a;libnn_uds.$(CTROptimizeOption).a;libnn_ulcd.$(CTROptimizeOption).a;libnn_util.$(CTROptimizeOption).a;libnn_voicesel.$(CTROptimizeOption).a;libnn_y2r.$(CTROptimizeOption).a</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release_NW|CTR'">crt0.$(CTROptimizeOption).o;libgles2.$(CTROptimizeOption).a;libnn_aacdec.$(CTROptimizeOption).a;libnn_aacenc.$(CTROptimizeOption).a;libnn_ac.$(CTROptimizeOption).a;libnn_applet.$(CTROptimizeOption).a;libnn_boss.$(CTROptimizeOption).a;libnn_camera.$(CTROptimizeOption).a;libnn_ec.$(CTROptimizeOption).a;libnn_enc.$(CTROptimizeOption).a;libnn_extrapad.$(CTROptimizeOption).a;libnn_cec.$(CTROptimizeOption).a;libnn_cfg.$(CTROptimizeOption).a;libnn_crypto.$(CTROptimizeOption).a;libnn_cryptoRsa.$(CTROptimizeOption).a;libnn_cx.$(CTROptimizeOption).a;libnn_dbg.$(CTROptimizeOption).a;libnn_dbm.$(CTROptimizeOption).a;libnn_dlp.$(CTROptimizeOption).a;libnn_dsp.$(CTROptimizeOption).a;libnn_err.$(CTROptimizeOption).a;libnn_erreula.$(CTROptimizeOption).a;libnn_fnd.$(CTROptimizeOption).a;libnn_font.$(CTROptimizeOption).a;libnn_friends.$(CTROptimizeOption).a;libnn_fs.$(CTROptimizeOption).a;libnn_gd.$(CTROptimizeOption).a;libnn_gr.$(CTROptimizeOption).a;libnn_gxlow.$(CTROptimizeOption).a;libnn_hid.$(CTROptimizeOption).a;libnn_hidlow.$(CTROptimizeOption).a;libnn_http.$(CTROptimizeOption).a;libnn_init.$(CTROptimizeOption).a;libnn_ir.$(CTROptimizeOption).a;libnn_jpegmp.$(CTROptimizeOption).a;libnn_math.$(CTROptimizeOption).a;libnn_mic.$(CTROptimizeOption).a;libnn_ndm.$(CTROptimizeOption).a;libnn_news.$(CTROptimizeOption).a;libnn_nfp.$(CTROptimizeOption).a;libnn_ngc.$(CTROptimizeOption).a;libnn_nstd.$(CTROptimizeOption).a;libnn_nwm.$(CTROptimizeOption).a;libnn_olv.$(CTROptimizeOption).a;libnn_os.$(CTROptimizeOption).a;libnn_phtsel.$(CTROptimizeOption).a;libnn_pl.$(CTROptimizeOption).a;libnn_ptm.$(CTROptimizeOption).a;libnn_qtm.$(CTROptimizeOption).a;libnn_rdt.$(CTROptimizeOption).a;libnn_snd.$(CTROptimizeOption).a;libnn_socket.$(CTROptimizeOption).a;libnn_srv.$(CTROptimizeOption).a;libnn_ssl.$(CTROptimizeOption).a;libnn_svc.$(CTROptimizeOption).a;libnn_svcDbg.$(CTROptimizeOption).a;libnn_swkbd.$(CTROptimizeOption).a;libnn_tpl.$(CTROptimizeOption).a;libnn_ubl.$(CTROptimizeOption).a;libnn_uds.$(CTROptimizeOption).a;libnn_ulcd.$(CTROptimizeOption).a;libnn_util.$(CTROptimizeOption).a;libnn_voicesel.$(CTROptimizeOption).a;libnn_webbrs.$(CTROptimizeOption).a;libnn_y2r.$(CTROptimizeOption).a;libnw_ctrl.$(CTROptimizeOption).a;libnw_dev.$(CTROptimizeOption).a;libnw_eft.$(CTROptimizeOption).a;libnw_eftvw.$(CTROptimizeOption).a;libnw_font2.$(CTROptimizeOption).a;libnw_h3d.$(CTROptimizeOption).a;libnw_lyt2.$(CTROptimizeOption).a;libnw_snd.$(CTROptimizeOption).a;libnw_snddev.$(CTROptimizeOption).a;libnw_sys.$(CTROptimizeOption).a</AdditionalDependencies>
+    </Link>
+    <MakeRom />
+    <MakeRom />
+    <MakeRom />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ctreq60.rsf" />
+    <None Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\engine.cpp" />
+    <ClCompile Include="src\game_main.cpp" />
+    <ClCompile Include="src\mem.cpp" />
+    <ClCompile Include="src\QR.cpp" />
+    <ClCompile Include="src\rvct_stdio.cpp" />
+    <ClCompile Include="src\nwsound.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\SaveDataManager.cpp" />
+    <ClCompile Include="src\SaveManager.cpp" />
+    <ClCompile Include="src\VRamAllocator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\engine.h" />
+    <ClInclude Include="src\MatrixStack.h" />
+    <ClInclude Include="src\mem.h" />
+    <ClInclude Include="src\nwsound.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|CTR'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\QR.h" />
+    <ClInclude Include="src\SaveDataManager.h" />
+    <ClInclude Include="src\SaveManager.h" />
+    <ClInclude Include="src\VRamAllocator.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ctr2_asm.targets" Condition="(exists('$(VCTargetsPath)\BuildCustomizations\ctr2_asm.targets') and '$(ConfigurationType)' != 'VertexShader' and '$(ConfigurationType)' != 'PCH')" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ctr2_items.targets" Condition="exists('$(VCTargetsPath)\BuildCustomizations\ctr2_items.targets')" />
+  </ImportGroup>
+</Project>

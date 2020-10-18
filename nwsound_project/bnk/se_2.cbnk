@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Bank xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0.0" Platform="Ctr" xmlns="NintendoWare.SoundFoundation.FileFormats.NintendoWare">
+  <Head>
+    <Title>TestBank</Title>
+  </Head>
+  <Body>
+    <Bank>
+      <Items>
+        <Instrument Name="INST_NOISE2">
+          <Parameters>
+            <Comment />
+            <ColorIndex>0</ColorIndex>
+            <IsEnabled>True</IsEnabled>
+            <ProgramNo>0</ProgramNo>
+            <Volume>127</Volume>
+            <PitchSemitones>0</PitchSemitones>
+            <PitchCents>0</PitchCents>
+            <Envelope>
+              <Parameters>
+                <Attack>127</Attack>
+                <Decay>70</Decay>
+                <Sustain>70</Sustain>
+                <Hold>0</Hold>
+                <Release>127</Release>
+              </Parameters>
+            </Envelope>
+            <InstrumentEnvelopeMode>Instrument</InstrumentEnvelopeMode>
+          </Parameters>
+          <Items>
+            <KeyRegion>
+              <Parameters>
+                <Comment />
+                <ColorIndex>0</ColorIndex>
+                <IsEnabled>True</IsEnabled>
+                <KeyMin>0</KeyMin>
+                <KeyMax>127</KeyMax>
+              </Parameters>
+              <Items>
+                <VelocityRegion>
+                  <Parameters>
+                    <Comment />
+                    <ColorIndex>0</ColorIndex>
+                    <IsEnabled>True</IsEnabled>
+                    <FilePath>../aif/whitenoise.wav</FilePath>
+                    <WaveEncoding>Adpcm</WaveEncoding>
+                    <OriginalKey>69</OriginalKey>
+                    <Envelope>
+                      <Parameters>
+                        <Attack>127</Attack>
+                        <Decay>127</Decay>
+                        <Sustain>127</Sustain>
+                        <Hold>0</Hold>
+                        <Release>127</Release>
+                      </Parameters>
+                    </Envelope>
+                    <VelocityMin>0</VelocityMin>
+                    <VelocityMax>127</VelocityMax>
+                    <Volume>127</Volume>
+                    <Pan>64</Pan>
+                    <PitchSemitones>0</PitchSemitones>
+                    <PitchCents>0</PitchCents>
+                    <KeyGroup>0</KeyGroup>
+                    <InstrumentNoteOffMode>Release</InstrumentNoteOffMode>
+                  </Parameters>
+                </VelocityRegion>
+              </Items>
+            </KeyRegion>
+          </Items>
+        </Instrument>
+      </Items>
+    </Bank>
+  </Body>
+</Bank>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NintendoWareIntermediateFile>
+	<GraphicsContentCtr Version="1.3.0" Namespace="">
+		<EditData>
+			<MetaData>
+				<Key>MetaData</Key>
+				<Create Date="2017-05-01T11:43:55">
+					<ToolDescriptions Name="NintendoWare Creative Studio For Banner." Version="1.3.1.42554" />
+				</Create>
+				<Modify Date="2017-05-01T11:59:32">
+					<ToolDescriptions Name="NintendoWare Creative Studio For Banner." Version="1.3.1.42554" />
+				</Modify>
+			</MetaData>
+		</EditData>
+		<SceneEnvironmentSettings>
+			<SceneEnvironmentSetting Name="SceneEnvironment1">
+				<LightSets>
+					<LightSetSlot Index="0">
+						<LightSet Comment="Light set">
+							<Lights>
+								<SceneObjectReference>Lights["Lighting_Top"]@file:COMMON.clgt</SceneObjectReference>
+								<SceneObjectReference>Lights["Lighting_Bottom"]@file:COMMON.clgt</SceneObjectReference>
+								<SceneObjectReference>Lights["AmbientLight"]@file:COMMON.clgt</SceneObjectReference>
+							</Lights>
+						</LightSet>
+					</LightSetSlot>
+				</LightSets>
+			</SceneEnvironmentSetting>
+		</SceneEnvironmentSettings>
+	</GraphicsContentCtr>
+</NintendoWareIntermediateFile>

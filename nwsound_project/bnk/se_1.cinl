@@ -1,0 +1,2 @@
+#define INST_SQUARE	0
+#define INST_WHITENOISE	1

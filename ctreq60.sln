@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ctreq60", "ctreq60.vcxproj", "{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9504DBF7-B879-4217-BB47-286C32A4522E} = {9504DBF7-B879-4217-BB47-286C32A4522E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shaders_CTR", "shaders\shaders_CTR.vcxproj", "{9504DBF7-B879-4217-BB47-286C32A4522E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_NW|CTR = Debug_NW|CTR
+		Debug|CTR = Debug|CTR
+		Develop|CTR = Develop|CTR
+		Release_NW|CTR = Release_NW|CTR
+		Release|CTR = Release|CTR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Debug_NW|CTR.ActiveCfg = Debug_NW|CTR
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Debug_NW|CTR.Build.0 = Debug_NW|CTR
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Debug|CTR.ActiveCfg = Debug|CTR
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Debug|CTR.Build.0 = Debug|CTR
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Develop|CTR.ActiveCfg = Develop|CTR
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Develop|CTR.Build.0 = Develop|CTR
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Release_NW|CTR.ActiveCfg = Release_NW|CTR
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Release_NW|CTR.Build.0 = Release_NW|CTR
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Release|CTR.ActiveCfg = Release|CTR
+		{3B35FAC8-6591-461C-88D7-1F58C5F4EF92}.Release|CTR.Build.0 = Release|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Debug_NW|CTR.ActiveCfg = Debug|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Debug_NW|CTR.Build.0 = Debug|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Debug|CTR.ActiveCfg = Debug|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Debug|CTR.Build.0 = Debug|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Develop|CTR.ActiveCfg = Develop|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Develop|CTR.Build.0 = Develop|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Release_NW|CTR.ActiveCfg = Release_NW|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Release_NW|CTR.Build.0 = Release_NW|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Release|CTR.ActiveCfg = Release|CTR
+		{9504DBF7-B879-4217-BB47-286C32A4522E}.Release|CTR.Build.0 = Release|CTR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
